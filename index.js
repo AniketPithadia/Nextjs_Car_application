@@ -18,7 +18,9 @@ app.listen(port, () => {
 
   console.log(`Server started at ${port}`);
 });
-
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/listing", carListingRoutes);
