@@ -10,7 +10,7 @@ const userSchema = z.object({
   username: z.string().min(3).max(20),
   email: z.string().email(),
   password: z.string().min(6),
-  avatar: z.string().url(),
+  avatar: z.string()?.url().optional(),
 });
 
 // Validate function for user
