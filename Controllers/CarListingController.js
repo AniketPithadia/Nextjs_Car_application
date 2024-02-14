@@ -11,7 +11,7 @@ const carListingSchema = z.object({
   price: z.number().min(0),
   location: z.string().min(3).max(100),
   image: z.string().url().optional(),
-  owner: z.string().uuid(),
+  owner: z.string().min(3).max(50),
 });
 // Validate function for car listing
 const validateCarListing = (data) => {
