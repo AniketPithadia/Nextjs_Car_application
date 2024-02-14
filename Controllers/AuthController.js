@@ -7,7 +7,7 @@ import bcryptjs from "bcryptjs";
 
 // Define Zod schema for user
 const userSchema = z.object({
-  username: z.string().min(3).max(20),
+  username: z.string().min(3).max(20).optional(),
   email: z.string().email(),
   password: z.string().min(6),
   avatar: z.string()?.url().optional(),
